@@ -134,12 +134,12 @@ body._lock {
 }
 
 .header {
+  background-color: #CDA582;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.75);
 }
 .header__container {
   display: flex;
@@ -165,31 +165,6 @@ body._lock {
   }
   .header__logo img {
     transform: scale(0.8);
-  }
-}
-.header__button {
-  position: relative;
-  border: 0.0625rem solid #f1f1f1;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  font-size: 0.875rem;
-  cursor: pointer;
-  line-height: 1.2142857143;
-  padding: 0.9375rem 1.5rem;
-  transition: all 0.3s ease 0s;
-}
-@media (any-hover: hover) {
-  .header__button:hover {
-    color: #fff;
-    border: 0.0625rem solid #000000;
-  }
-}
-@media (max-width: 47.99875em) {
-  .header__button {
-    padding: 0.625rem 0.9375rem;
-    color: #fff;
-    border: 0.0625rem solid #512729;
-    background-color: #512729;
   }
 }
 .header__actions {
@@ -418,8 +393,7 @@ body._lock {
 }
 
 .footer {
-  border-top: 1px solid #512729;
-  border-bottom: 1px solid #512729;
+  background-color: #CDA582;
   min-height: 12.5rem;
 }
 @media (min-width: 77.5em) {
@@ -476,20 +450,20 @@ body._lock {
   }
 }
 @media (min-width: 20em) and (max-width: 77.5em) {
-  @supports (gap: clamp( 1.875rem , 1.4402173913rem  +  2.1739130435vw , 3.125rem )) {
+  @supports (gap: clamp( 2.5rem , 2.2826086957rem  +  1.0869565217vw , 3.125rem )) {
     .footer__content {
-      gap: clamp( 1.875rem , 1.4402173913rem  +  2.1739130435vw , 3.125rem );
+      gap: clamp( 2.5rem , 2.2826086957rem  +  1.0869565217vw , 3.125rem );
     }
   }
-  @supports not (gap: clamp( 1.875rem , 1.4402173913rem  +  2.1739130435vw , 3.125rem )) {
+  @supports not (gap: clamp( 2.5rem , 2.2826086957rem  +  1.0869565217vw , 3.125rem )) {
     .footer__content {
-      gap: calc(1.875rem + 1.25 * (100vw - 20rem) / 57.5);
+      gap: calc(2.5rem + 0.625 * (100vw - 20rem) / 57.5);
     }
   }
 }
 @media (max-width: 20em) {
   .footer__content {
-    gap: 1.875rem;
+    gap: 2.5rem;
   }
 }
 @media (max-width: 56.25em) {
@@ -504,6 +478,15 @@ body._lock {
   gap: 1.875rem;
   flex: 0 0 auto;
 }
+.socials-footer__icon img {
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .socials-footer__icon:hover img {
+    transform: scale(1.05);
+  }
+}
+
 .menu-footer {
   display: flex;
   justify-content: space-around;
@@ -533,6 +516,15 @@ body._lock {
 .menu-footer__link {
   font-size: 1rem;
   margin-bottom: 6.25rem;
+  background: linear-gradient(to right, currentColor 0%, currentColor 100%) no-repeat;
+  background-size: 0 2px; /* Начальная ширина подчеркивания */
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+@media (any-hover: hover) {
+  .menu-footer__link:hover {
+    background-size: 100% 2px; /* Конечная ширина подчеркивания при наведении */
+  }
 }
 .information-dev {
   padding-top: 0.625rem;

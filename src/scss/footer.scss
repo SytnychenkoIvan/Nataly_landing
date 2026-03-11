@@ -1,6 +1,7 @@
 .footer {
-border-top: 1px solid #512729;
-border-bottom: 1px solid #512729;
+background-color: #CDA582;
+// border-top: 1px solid #512729;
+// border-bottom: 1px solid #512729;
 min-height: rem(200);
 @include adaptiveValue("padding-top", 50, 20);
 @include adaptiveValue("padding-bottom", 50, 20);
@@ -23,7 +24,7 @@ min-height: rem(200);
 		&__content {
 			display: flex;
 			align-items: start;
-			@include adaptiveValue("gap", 50, 30);
+			@include adaptiveValue("gap", 50, 40);
 			@media (max-width: em(900)){
 				flex-direction: column;
 				align-items: center;
@@ -57,8 +58,19 @@ min-height: rem(200);
 			
 			// flex: 0 0 ;
 		}
-}
-.icon-footer {
+		&__icon {
+			img{
+				transition: all 0.3s ease 0s;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					img{
+						transform: scale(1.05);
+					}
+				}
+			}
+			// flex: 0 0 ;
+		}
 }
 .menu-footer {
 		display: flex;
@@ -73,9 +85,7 @@ min-height: rem(200);
 			justify-content: space-around;
 		}
 		@media (max-width:$mobileSmall){
-			// flex-direction: column;
 			flex-wrap: wrap;
-			// align-items: center;
 			gap: rem(40);
 		}
 		// .menu-footer__main
@@ -99,10 +109,9 @@ min-height: rem(200);
 
 		&__item {
 			&:not(:last-child){
-				
 					margin-bottom: rem(15);
-				
 			}
+			
 		}
 
 		// .menu-footer__link
@@ -110,7 +119,15 @@ min-height: rem(200);
 		&__link {
 			font-size: rem(16);
 			margin-bottom: rem(100);
-			
+			background: linear-gradient(to right, currentColor 0%, currentColor 100%) no-repeat;
+      	background-size: 0 2px; /* Начальная ширина подчеркивания */
+      	background-position: left bottom;
+      	transition: background-size 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					background-size: 100% 2px; /* Конечная ширина подчеркивания при наведении */
+				}
+			}
 		}
 		// &__link:not(:last-child) {
 		// 	// font-size: rem(16);

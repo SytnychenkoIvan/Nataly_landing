@@ -1,10 +1,11 @@
 .header {
+	background-color: #CDA582;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	background-color: rgba(255, 255, 255, 0.75);
+	// background-color: rgba(255, 255, 255, 0.75);
 	&__container {
 		// margin: rem(0) rem(10) rem(0) rem(10);
 		display: flex;
@@ -33,29 +34,29 @@
 
 	}
 
-	&__button {
-		position: relative;
-		border: rem(1) solid #f1f1f1;
-		border-radius: rem(8);
-		font-weight: 500;
-		font-size: rem(14);
-		cursor: pointer; 
-		line-height: math.div(17, 14);
-		padding: rem(15) rem(24);
-		transition: all 0.3s ease 0s;
-		@media (any-hover: hover){
-			&:hover {
-				color: #fff;
-				border: rem(1) solid #000000;
-			}
-		}
-		@media (max-width: $mobile) {
-			padding: rem(10) rem(15);
-			color: #fff;
-			border: rem(1) solid $mainColor;
-			background-color: $mainColor;
-		}
-	}
+	// &__button {
+	// 	position: relative;
+	// 	border: rem(1) solid #f1f1f1;
+	// 	border-radius: rem(8);
+	// 	font-weight: 500;
+	// 	font-size: rem(14);
+	// 	cursor: pointer; 
+	// 	line-height: math.div(17, 14);
+	// 	padding: rem(15) rem(24);
+	// 	transition: all 0.3s ease 0s;
+	// 	@media (any-hover: hover){
+	// 		&:hover {
+	// 			color: #fff;
+	// 			border: rem(1) solid #000000;
+	// 		}
+	// 	}
+	// 	@media (max-width: $mobile) {
+	// 		padding: rem(10) rem(15);
+	// 		color: #fff;
+	// 		border: rem(1) solid $mainColor;
+	// 		background-color: $mainColor;
+	// 	}
+	// }
 
 	&__actions {
 		display: flex;
