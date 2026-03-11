@@ -1,20 +1,30 @@
 .header {
-	background-color: #CDA582;
+	background-color: #F9ECE1;
+	@include adaptiveValue("padding-top", 45, 15);
+	@include adaptiveValue("padding-bottom", 45, 15);
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	// background-color: rgba(255, 255, 255, 0.75);
+	transition: all 0.3s ease 0s;
+	&._header-scroll{
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+		background-color: rgba(0, 0, 0, 0.1);
+		@media (max-width:$mobile){
+			padding-top: rem(15);
+		padding-bottom: rem(15);
+		}
+		
+	}
+	
 	&__container {
-		// margin: rem(0) rem(10) rem(0) rem(10);
+		
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: rem(15);
-		padding-bottom: rem(5);
-		padding-top: rem(5);
-		min-height: 123px;
+		
 		@media (max-width: $mobile){
 			min-height: 60px;
 		}
@@ -34,29 +44,7 @@
 
 	}
 
-	// &__button {
-	// 	position: relative;
-	// 	border: rem(1) solid #f1f1f1;
-	// 	border-radius: rem(8);
-	// 	font-weight: 500;
-	// 	font-size: rem(14);
-	// 	cursor: pointer; 
-	// 	line-height: math.div(17, 14);
-	// 	padding: rem(15) rem(24);
-	// 	transition: all 0.3s ease 0s;
-	// 	@media (any-hover: hover){
-	// 		&:hover {
-	// 			color: #fff;
-	// 			border: rem(1) solid #000000;
-	// 		}
-	// 	}
-	// 	@media (max-width: $mobile) {
-	// 		padding: rem(10) rem(15);
-	// 		color: #fff;
-	// 		border: rem(1) solid $mainColor;
-	// 		background-color: $mainColor;
-	// 	}
-	// }
+
 
 	&__actions {
 		display: flex;
@@ -65,7 +53,6 @@
 		margin-right: rem(10);
 		@media (max-width:$tablet){
 			gap: rem(5);
-			// @include adaptiveValue("margin-right", 20, 10);
 		}
 		@media (max-width:$mobile){
 			flex-direction: row;
@@ -226,7 +213,9 @@
 }
 
 
-
+._header-scroll{
+	
+}
 
 
 // //Burger
