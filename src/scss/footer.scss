@@ -1,0 +1,139 @@
+.footer {
+border-top: 1px solid #512729;
+border-bottom: 1px solid #512729;
+min-height: rem(200);
+@include adaptiveValue("padding-top", 50, 20);
+@include adaptiveValue("padding-bottom", 50, 20);
+// display: flex;
+// justify-content: center;
+// align-items: center;
+		// .footer__container
+
+		&__container {
+			// display: flex;
+			// align-items: center;
+			// gap: rem(50);
+			// justify-content: center;
+		}
+
+		
+
+		// .footer__content
+
+		&__content {
+			display: flex;
+			align-items: start;
+			@include adaptiveValue("gap", 50, 30);
+			@media (max-width: em(900)){
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		// .footer__socials
+
+		&__socials {
+		}
+
+		// .footer__menu
+
+		&__menu {
+		}
+}
+.socials-footer {
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+		flex: 0 0 auto;
+		// margin-right: rem(20);
+		// .socials-footer__logo
+
+		&__logo {
+		}
+
+		// .socials-footer__icons
+
+		&__icons {
+			
+			// flex: 0 0 ;
+		}
+}
+.icon-footer {
+}
+.menu-footer {
+		display: flex;
+		justify-content: space-around;
+		flex: 1	1 100%;
+		gap: rem(20);
+		
+		@media (max-width: em(900)){
+			// gap: rem(30);
+			flex: 1	0 100%;
+			min-width: 100%;
+			justify-content: space-around;
+		}
+		@media (max-width:$mobileSmall){
+			// flex-direction: column;
+			flex-wrap: wrap;
+			// align-items: center;
+			gap: rem(40);
+		}
+		// .menu-footer__main
+
+		&__main {
+		}
+
+		// .menu-footer__titel
+
+		&__titel {
+			margin-bottom: rem(20);
+			font-weight: 700;
+		}
+
+		// .menu-footer__list
+
+		&__list {
+		}
+
+		// .menu-footer__item
+
+		&__item {
+			&:not(:last-child){
+				
+					margin-bottom: rem(15);
+				
+			}
+		}
+
+		// .menu-footer__link
+
+		&__link {
+			font-size: rem(16);
+			margin-bottom: rem(100);
+			
+		}
+		// &__link:not(:last-child) {
+		// 	// font-size: rem(16);
+			
+		// }
+
+		// .menu-footer__services
+
+		&__services {
+		}
+
+		// .menu-footer__contacts
+
+		&__contacts {
+		}
+}
+.information-dev{
+	padding-top: rem(10);
+	padding-bottom: rem(10);
+			font-size: rem(14);
+			color: #8b8787;
+			text-align: center;
+			@media (max-width:$mobileSmall){
+				font-size: rem(12);
+			}
+		}
