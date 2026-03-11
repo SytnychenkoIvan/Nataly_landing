@@ -554,9 +554,13 @@ body._lock {
     justify-content: space-around;
   }
 }
-@media (max-width: 29.99875em) {
+@media (max-width: 35.3125em) {
   .menu-footer {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 29.99875em) {
+  .menu-footer {
     gap: 2.5rem;
   }
 }
@@ -591,6 +595,10 @@ body._lock {
   .information-dev {
     font-size: 0.75rem;
   }
+}
+
+.item-center {
+  text-align: center;
 }
 
 .ibg {
@@ -855,8 +863,7 @@ body._lock {
 }
 
 .main {
-  background: url("../img/main/main-bg.jpg") 50%/cover no-repeat;
-  min-height: 700px;
+  background: url("../img/main/2000x1335.jpg") 50%/cover no-repeat;
   position: relative;
 }
 @media (min-width: 77.5em) {

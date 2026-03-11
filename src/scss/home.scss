@@ -1,7 +1,7 @@
 
 .main {
-	background: url('../img/main/main-bg.jpg') 50%/ cover no-repeat;
-	min-height: 700px;
+	background: url('../img/main/2000x1335.jpg') 50%/ cover no-repeat;
+	// min-height: 700px;
 	position: relative;
 	@include adaptiveValue("min-height", 750, 530);
 		// .main__container

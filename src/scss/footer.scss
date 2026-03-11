@@ -73,8 +73,11 @@ min-height: rem(200);
 			min-width: 100%;
 			justify-content: space-around;
 		}
-		@media (max-width:$mobileSmall){
+		@media (max-width: em(565)){
 			flex-wrap: wrap;
+			
+		}
+		@media (max-width:$mobileSmall){
 			gap: rem(40);
 		}
 		// .menu-footer__main
@@ -139,3 +142,6 @@ min-height: rem(200);
 				font-size: rem(12);
 			}
 		}
+.item-center{
+	text-align: center;
+}
