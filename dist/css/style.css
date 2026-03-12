@@ -244,7 +244,8 @@ body._lock {
   }
 }
 .header__actions .action img {
-  transition: all 0.3s ease 0s;
+  border-radius: 50%;
+  transition: all 0.1s ease 0s;
 }
 @media (max-width: 61.99875em) {
   .header__actions .action img {
@@ -256,6 +257,16 @@ body._lock {
     transform: scale(1.05);
   }
 }
+.header__actions .action:active img {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 5px 1px #512729;
+}
+@media (max-width: 61.99875em) {
+  .header__actions .action:active img {
+    transform: scale(0.7);
+  }
+}
+
 .menu {
   padding: 0 0.625rem;
 }
@@ -395,6 +406,10 @@ body._lock {
     font-size: 1.5625rem;
   }
 }
+.menu__link:active {
+  color: #311a1b;
+  transform: scale(0.95);
+}
 
 .icon-menu {
   display: none;
@@ -533,12 +548,17 @@ body._lock {
   flex: 0 0 auto;
 }
 .socials-footer__icon img {
-  transition: all 0.3s ease 0s;
+  border-radius: 50%;
+  transition: all 0.1s ease 0s;
 }
 @media (any-hover: hover) {
   .socials-footer__icon:hover img {
     transform: scale(1.05);
   }
+}
+.socials-footer__icon:active img {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 5px 1px #512729;
 }
 
 .menu-footer {
@@ -572,8 +592,10 @@ body._lock {
   margin-bottom: 0.9375rem;
 }
 .menu-footer__link {
+  display: inline-block;
+  transition: all 0.1s ease 0s;
   font-size: 1rem;
-  margin-bottom: 6.25rem;
+  line-height: 1.5625;
   background: linear-gradient(to right, currentColor 0%, currentColor 100%) no-repeat;
   background-size: 0 2px; /* Начальная ширина подчеркивания */
   background-position: left bottom;
@@ -583,6 +605,10 @@ body._lock {
   .menu-footer__link:hover {
     background-size: 100% 2px; /* Конечная ширина подчеркивания при наведении */
   }
+}
+.menu-footer__link:active {
+  color: #311a1b;
+  transform: scale(0.95);
 }
 .information-dev {
   padding-top: 0.625rem;
@@ -863,7 +889,7 @@ body._lock {
 }
 
 .main {
-  background: url("../img/main/2000x1335.jpg") 50%/cover no-repeat;
+  background: url("../img/main/main-bg.jpg") 50%/cover no-repeat;
   position: relative;
 }
 @media (min-width: 77.5em) {
@@ -954,7 +980,7 @@ body._lock {
 .main__text {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #000000;
+  color: #fff;
 }
 @media (max-width: 37.5em) {
   .main__text {
@@ -969,10 +995,15 @@ body._lock {
   gap: 1.5625rem;
 }
 .main .main__action img {
-  transition: all 0.3s ease 0s;
+  border-radius: 50%;
+  transition: all 0.1s ease 0s;
 }
 @media (any-hover: hover) {
   .main .main__action:hover img {
     transform: scale(1.05);
   }
+}
+.main .main__action:active img {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 5px 1px #512729;
 }
