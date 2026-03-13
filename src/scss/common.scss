@@ -4,7 +4,31 @@
 
 		&__main {
 		}
+		&__aboutme {
+		}
 }
+
+
+.main-title {
+	text-shadow: 2px 2px 0px #afaeae;
+}
+.title{
+	text-decoration: underline;
+	text-underline-offset: rem(20);
+	text-decoration-thickness: rem(3);
+	font-family: "Comfortaa";
+	@include adaptiveValue("font-size", 50, 35);
+	// font-size: rem(50);
+	font-weight: 400;
+	margin-bottom: rem(100);
+	@include adaptiveValue("margin-bottom", 100, 60);
+	text-shadow: rem(2) rem(2) rem(0) #afaeae;
+}
+.text {
+	font-family: "Comfortaa";
+	line-height: math.div(35 , 18);
+}
+
 //=========================================================================================
 // .title {
 // 	font-weight: 600;

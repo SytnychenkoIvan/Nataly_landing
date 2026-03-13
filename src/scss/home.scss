@@ -3,6 +3,7 @@
 	background: url('../img/main/main-bg.jpg') 50%/ cover no-repeat;
 	position: relative;
 	@include adaptiveValue("min-height", 750, 530);
+	@include adaptiveValue("margin-bottom", 70, 30);
 		// .main__container
 
 		&__container {
@@ -14,9 +15,11 @@
 
 		&__content {
 			flex: 0 1 rem(650);
-			padding-top: rem(270);
 			@include adaptiveValue("padding-top", 270, 130);
 			z-index: 5;
+			@media (max-width:$mobileSmall){
+				margin-bottom: rem(30);
+			}
 		}
 
 		// .main__title
@@ -88,7 +91,67 @@
 		}
 }
 }
-.title {
+
+
+//========================================================================================================================================================
+.aboutme {
+		@include adaptiveValue("padding-top", 90, 30);
+		@include adaptiveValue("padding-bottom", 90, 40);
+		// .aboutme__container
+
+		&__container {
+		}
+
+		// .aboutme__title
+
+		&__title {
+		}
+
+		// .aboutme__content
+
+		&__content {
+			display: flex;
+			@include adaptiveValue("column-gap", 100, 10);
+			@media (max-width:$mobile){
+				flex-direction: column;
+				// @include adaptiveValue("row-gap", 100, 10);
+				row-gap: rem(30);
+			}
+		}
+
+		// .aboutme__image
+
+		&__image {
+			flex: 0 0 40%;
+			// max-height: 650px;
+			aspect-ratio: 4/5;
+			overflow: hidden;
+			border-radius: 30px;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 30px;
+			}
+		}
+
+		// .aboutme__text
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			padding-top: rem(30);
+			// gap: rem(50);
+			@include adaptiveValue("gap", 50, 20);
+			flex: 1 1 auto;
+			min-width: 0;
+			// border: 1px solid #512729;
+			font-weight: 700;
+			@media (max-width:$mobileSmall){
+				font-size: rem(16);
+			}
+		}
+
+		// .aboutme__actions
 }
-.text {
-}
+

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Шрифты*/
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");
 [class^=_icon-]:before,
@@ -648,6 +649,73 @@ body._lock {
 .page {
   flex: 1 1 auto;
 }
+.main-title {
+  text-shadow: 2px 2px 0px #afaeae;
+}
+
+.title {
+  text-decoration: underline;
+  text-underline-offset: 1.25rem;
+  text-decoration-thickness: 0.1875rem;
+  font-family: "Comfortaa";
+}
+@media (min-width: 77.5em) {
+  .title {
+    font-size: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (font-size: clamp( 2.1875rem , 1.8614130435rem  +  1.6304347826vw , 3.125rem )) {
+    .title {
+      font-size: clamp( 2.1875rem , 1.8614130435rem  +  1.6304347826vw , 3.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 2.1875rem , 1.8614130435rem  +  1.6304347826vw , 3.125rem )) {
+    .title {
+      font-size: calc(2.1875rem + 0.9375 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .title {
+    font-size: 2.1875rem;
+  }
+}
+.title {
+  font-weight: 400;
+  margin-bottom: 6.25rem;
+}
+@media (min-width: 77.5em) {
+  .title {
+    margin-bottom: 6.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (margin-bottom: clamp( 3.75rem , 2.8804347826rem  +  4.347826087vw , 6.25rem )) {
+    .title {
+      margin-bottom: clamp( 3.75rem , 2.8804347826rem  +  4.347826087vw , 6.25rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 3.75rem , 2.8804347826rem  +  4.347826087vw , 6.25rem )) {
+    .title {
+      margin-bottom: calc(3.75rem + 2.5 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .title {
+    margin-bottom: 3.75rem;
+  }
+}
+.title {
+  text-shadow: 0.125rem 0.125rem 0rem #afaeae;
+}
+
+.text {
+  font-family: "Comfortaa";
+  line-height: 1.9444444444;
+}
+
 .form {
   max-width: 33.3125rem;
   background-color: #fff;
@@ -914,13 +982,34 @@ body._lock {
     min-height: 33.125rem;
   }
 }
+@media (min-width: 77.5em) {
+  .main {
+    margin-bottom: 4.375rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (margin-bottom: clamp( 1.875rem , 1.0054347826rem  +  4.347826087vw , 4.375rem )) {
+    .main {
+      margin-bottom: clamp( 1.875rem , 1.0054347826rem  +  4.347826087vw , 4.375rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.875rem , 1.0054347826rem  +  4.347826087vw , 4.375rem )) {
+    .main {
+      margin-bottom: calc(1.875rem + 2.5 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .main {
+    margin-bottom: 1.875rem;
+  }
+}
 .main__container {
   display: flex;
   z-index: 500;
 }
 .main__content {
   flex: 0 1 40.625rem;
-  padding-top: 16.875rem;
 }
 @media (min-width: 77.5em) {
   .main__content {
@@ -946,6 +1035,11 @@ body._lock {
 }
 .main__content {
   z-index: 5;
+}
+@media (max-width: 29.99875em) {
+  .main__content {
+    margin-bottom: 1.875rem;
+  }
 }
 .main__title {
   font-size: 4.0625rem;
@@ -1006,4 +1100,129 @@ body._lock {
 .main .main__action:active img {
   transform: scale(0.95);
   box-shadow: 0px 0px 5px 1px #512729;
+}
+
+@media (min-width: 77.5em) {
+  .aboutme {
+    padding-top: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (padding-top: clamp( 1.875rem , 0.5706521739rem  +  6.5217391304vw , 5.625rem )) {
+    .aboutme {
+      padding-top: clamp( 1.875rem , 0.5706521739rem  +  6.5217391304vw , 5.625rem );
+    }
+  }
+  @supports not (padding-top: clamp( 1.875rem , 0.5706521739rem  +  6.5217391304vw , 5.625rem )) {
+    .aboutme {
+      padding-top: calc(1.875rem + 3.75 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .aboutme {
+    padding-top: 1.875rem;
+  }
+}
+@media (min-width: 77.5em) {
+  .aboutme {
+    padding-bottom: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (padding-bottom: clamp( 2.5rem , 1.4130434783rem  +  5.4347826087vw , 5.625rem )) {
+    .aboutme {
+      padding-bottom: clamp( 2.5rem , 1.4130434783rem  +  5.4347826087vw , 5.625rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 2.5rem , 1.4130434783rem  +  5.4347826087vw , 5.625rem )) {
+    .aboutme {
+      padding-bottom: calc(2.5rem + 3.125 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .aboutme {
+    padding-bottom: 2.5rem;
+  }
+}
+.aboutme__content {
+  display: flex;
+}
+@media (min-width: 77.5em) {
+  .aboutme__content {
+    column-gap: 6.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (column-gap: clamp( 0.625rem , -1.3315217391rem  +  9.7826086957vw , 6.25rem )) {
+    .aboutme__content {
+      column-gap: clamp( 0.625rem , -1.3315217391rem  +  9.7826086957vw , 6.25rem );
+    }
+  }
+  @supports not (column-gap: clamp( 0.625rem , -1.3315217391rem  +  9.7826086957vw , 6.25rem )) {
+    .aboutme__content {
+      column-gap: calc(0.625rem + 5.625 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .aboutme__content {
+    column-gap: 0.625rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .aboutme__content {
+    flex-direction: column;
+    row-gap: 1.875rem;
+  }
+}
+.aboutme__image {
+  flex: 0 0 40%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.aboutme__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.aboutme__text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.875rem;
+}
+@media (min-width: 77.5em) {
+  .aboutme__text {
+    gap: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (gap: clamp( 1.25rem , 0.597826087rem  +  3.2608695652vw , 3.125rem )) {
+    .aboutme__text {
+      gap: clamp( 1.25rem , 0.597826087rem  +  3.2608695652vw , 3.125rem );
+    }
+  }
+  @supports not (gap: clamp( 1.25rem , 0.597826087rem  +  3.2608695652vw , 3.125rem )) {
+    .aboutme__text {
+      gap: calc(1.25rem + 1.875 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .aboutme__text {
+    gap: 1.25rem;
+  }
+}
+.aboutme__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-weight: 700;
+}
+@media (max-width: 29.99875em) {
+  .aboutme__text {
+    font-size: 1rem;
+  }
 }
