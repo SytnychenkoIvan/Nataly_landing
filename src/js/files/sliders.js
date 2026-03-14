@@ -226,25 +226,25 @@ function initSliders() {
 			},
 
 			// Брейкпоінти
-			breakpoints: {
-				320: {
-					slidesPerView: 1.2,
-					spaceBetween: 10,
-					autoHeight: true,
-				},
-				650: {
-					slidesPerView: 2,
-					spaceBetween: 15,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1200: {
-					slidesPerView: 3,
-					spaceBetween: 56,
-				},
-			},
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1.2,
+			// 		spaceBetween: 10,
+			// 		autoHeight: true,
+			// 	},
+			// 	650: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 15,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1200: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 56,
+			// 	},
+			// },
 
 			// Події
 			on: {
@@ -301,10 +301,40 @@ new Swiper('.swiper', {
 		clickable: true,
 	},
 	autoHeight: true,
-	slidesPerView: 1.8,
-	spaceBetween: 50,
+
+	observer: true,
+	observeParents: true,
+
+	slidesPerView: 3,
+	spaceBetween: 40,
 	centeredSlides: true,
 	loop: true,
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			autoHeight: true,
+		},
+		650: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+			autoHeight: true,
+		},
+		992: {
+			slidesPerView: 3,
+			// spaceBetween: 30,
+			autoHeight: true,
+		},
+		1200: {
+			// slidesPerView: 3,
+			// spaceBetween: 30,
+			autoHeight: true,
+		},
+	},
+	// Події
+	// on: {
+
+	// }
 });
 
 // document.querySelector('input').addEventListener('input', e => {
@@ -315,3 +345,25 @@ new Swiper('.swiper', {
 
 // // Встановлюємо рамку
 // element.style.border = '2px solid green';
+
+function setEqualSlideHeights() {
+	const slides = document.querySelectorAll('.services__swiper-slide');
+	let maxHeight = 0;
+
+	// спочатку скидаємо висоту, щоб правильно визначити
+	slides.forEach(slide => slide.style.height = 'auto');
+
+	// знаходимо найвищий слайд
+	slides.forEach(slide => {
+		const h = slide.offsetHeight;
+		if (h > maxHeight) maxHeight = h;
+	});
+
+	// встановлюємо всім слайдам одну висоту
+	slides.forEach(slide => slide.style.height = maxHeight + 'px');
+}
+
+// Викликаємо після завантаження сторінки
+window.addEventListener('load', setEqualSlideHeights);
+// Викликаємо після ресайзу
+window.addEventListener('resize', setEqualSlideHeights);

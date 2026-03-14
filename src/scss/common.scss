@@ -6,6 +6,8 @@
 		}
 		&__aboutme {
 		}
+		&__services {
+		}
 }
 
 
@@ -14,15 +16,19 @@
 }
 .title{
 	text-decoration: underline;
-	text-underline-offset: rem(20);
+	text-underline-offset: rem(15);
 	text-decoration-thickness: rem(3);
-	font-family: "Comfortaa";
+	font-family: "Montserrat";
+	// font-family: "Comfortaa";
 	@include adaptiveValue("font-size", 50, 35);
 	// font-size: rem(50);
 	font-weight: 400;
 	margin-bottom: rem(100);
 	@include adaptiveValue("margin-bottom", 100, 60);
 	text-shadow: rem(2) rem(2) rem(0) #afaeae;
+	@media (max-width:$mobile){
+		text-shadow: rem(1.5) rem(1.5) rem(0) #afaeae;
+	}
 }
 .text {
 	font-family: "Comfortaa";
