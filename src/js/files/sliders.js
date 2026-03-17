@@ -311,21 +311,36 @@ new Swiper('.swiper', {
 	loop: true,
 	breakpoints: {
 		320: {
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 10,
 			autoHeight: true,
 		},
 		650: {
-			slidesPerView: 2,
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1.5,
 			spaceBetween: 20,
 			autoHeight: true,
 		},
+		768: {
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1.5,
+			spaceBetween: 25,
+			autoHeight: true,
+		},
 		992: {
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 3,
 			// spaceBetween: 30,
 			autoHeight: true,
 		},
 		1200: {
+			// observer: true,
+			// observeParents: true,
 			// slidesPerView: 3,
 			// spaceBetween: 30,
 			autoHeight: true,

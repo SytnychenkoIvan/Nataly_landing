@@ -120,7 +120,6 @@ body._lock {
   flex-direction: column;
   min-height: 100%;
   overflow: hidden;
-  background-color: #fff;
 }
 
 /*
@@ -722,6 +721,25 @@ body._lock {
 .text {
   font-family: "Comfortaa";
   line-height: 1.9444444444;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5625rem;
+}
+
+.action img {
+  border-radius: 50%;
+  transition: all 0.1s ease 0s;
+}
+@media (any-hover: hover) {
+  .action:hover img {
+    transform: scale(1.05);
+  }
+}
+.action:active img {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 5px 1px #512729;
 }
 
 .form {
@@ -1643,28 +1661,6 @@ button.swiper-pagination-bullet {
     min-height: 33.125rem;
   }
 }
-@media (min-width: 77.5em) {
-  .main {
-    margin-bottom: 4.375rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 77.5em) {
-  @supports (margin-bottom: clamp( 1.875rem , 1.0054347826rem  +  4.347826087vw , 4.375rem )) {
-    .main {
-      margin-bottom: clamp( 1.875rem , 1.0054347826rem  +  4.347826087vw , 4.375rem );
-    }
-  }
-  @supports not (margin-bottom: clamp( 1.875rem , 1.0054347826rem  +  4.347826087vw , 4.375rem )) {
-    .main {
-      margin-bottom: calc(1.875rem + 2.5 * (100vw - 20rem) / 57.5);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .main {
-    margin-bottom: 1.875rem;
-  }
-}
 .main__container {
   display: flex;
   z-index: 500;
@@ -1745,24 +1741,14 @@ button.swiper-pagination-bullet {
 .main__text {
   margin-bottom: 1.875rem;
 }
-.main .main__actions {
-  display: flex;
-  gap: 1.5625rem;
-}
-.main .main__action img {
-  border-radius: 50%;
-  transition: all 0.1s ease 0s;
-}
-@media (any-hover: hover) {
-  .main .main__action:hover img {
-    transform: scale(1.05);
+@media (max-width: 29.99875em) {
+  .main .main__actions {
+    justify-content: center;
   }
 }
-.main .main__action:active img {
-  transform: scale(0.95);
-  box-shadow: 0px 0px 5px 1px #512729;
+.aboutme {
+  background-color: #fcf0f0;
 }
-
 @media (min-width: 77.5em) {
   .aboutme {
     padding-top: 5.625rem;
@@ -1954,6 +1940,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-slide {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
@@ -1995,4 +1982,160 @@ button.swiper-pagination-bullet {
   color: #191A23;
   font-size: 1.4375rem;
   font-weight: 500;
+}
+
+.price {
+  background-color: #fcf0f0;
+}
+@media (min-width: 77.5em) {
+  .price {
+    padding-top: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (padding-top: clamp( 1.875rem , 0.5706521739rem  +  6.5217391304vw , 5.625rem )) {
+    .price {
+      padding-top: clamp( 1.875rem , 0.5706521739rem  +  6.5217391304vw , 5.625rem );
+    }
+  }
+  @supports not (padding-top: clamp( 1.875rem , 0.5706521739rem  +  6.5217391304vw , 5.625rem )) {
+    .price {
+      padding-top: calc(1.875rem + 3.75 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .price {
+    padding-top: 1.875rem;
+  }
+}
+@media (min-width: 77.5em) {
+  .price {
+    padding-bottom: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (padding-bottom: clamp( 2.5rem , 1.4130434783rem  +  5.4347826087vw , 5.625rem )) {
+    .price {
+      padding-bottom: clamp( 2.5rem , 1.4130434783rem  +  5.4347826087vw , 5.625rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 2.5rem , 1.4130434783rem  +  5.4347826087vw , 5.625rem )) {
+    .price {
+      padding-bottom: calc(2.5rem + 3.125 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .price {
+    padding-bottom: 2.5rem;
+  }
+}
+.price__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 77.5em) {
+  .price__content {
+    row-gap: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (row-gap: clamp( 2.5rem , 2.2826086957rem  +  1.0869565217vw , 3.125rem )) {
+    .price__content {
+      row-gap: clamp( 2.5rem , 2.2826086957rem  +  1.0869565217vw , 3.125rem );
+    }
+  }
+  @supports not (row-gap: clamp( 2.5rem , 2.2826086957rem  +  1.0869565217vw , 3.125rem )) {
+    .price__content {
+      row-gap: calc(2.5rem + 0.625 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .price__content {
+    row-gap: 2.5rem;
+  }
+}
+.price__table {
+  font-family: "Oswald";
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3.125rem;
+  font-size: 1.25rem;
+  border-collapse: separate;
+  padding: 3.125rem;
+  border-spacing: 1.5625rem;
+}
+.price__table th {
+  font-size: 1.5625rem;
+  padding-bottom: 1.875rem;
+  color: #191A23;
+}
+@media (max-width: 29.99875em) {
+  .price__table th {
+    font-size: 1.25rem;
+  }
+}
+.price__table th:nth-child(2) {
+  text-align: left;
+}
+.price__table td:nth-child(1) {
+  border-bottom: 1px solid rgba(81, 39, 41, 0.3);
+}
+.price__table td:not(:last-child) {
+  padding-right: 1.875rem;
+}
+.price__table td:not(:last-child) span {
+  font-weight: 700;
+  color: #191A23;
+}
+.price__table td:nth-child(3) {
+  flex-wrap: nowrap;
+  gap: 0.3125rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 47.99875em) {
+  .price__table td:nth-child(2) {
+    text-align: center;
+  }
+}
+@media (max-width: 55.125em) {
+  .price__table {
+    border-spacing: 0.9375rem;
+    font-size: 1.125rem;
+  }
+  .price__table img {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 47.99875em) {
+  .price__table {
+    font-size: 18px;
+    padding: 1.875rem;
+    border-spacing: 0.9375rem;
+  }
+  .price__table span {
+    font-size: 1.125rem;
+  }
+  .price__table img {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 29.99875em) {
+  .price__table {
+    font-size: 0.875rem;
+    padding: 1.25rem 0.3125rem;
+    border-spacing: 0.625rem;
+    border-radius: 1.25rem;
+  }
+  .price__table span {
+    font-size: 1rem;
+  }
+  .price__table img {
+    transform: scale(0.7);
+  }
 }

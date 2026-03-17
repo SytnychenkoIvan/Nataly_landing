@@ -8,6 +8,8 @@
 		}
 		&__services {
 		}
+		&__price {
+		}
 }
 
 
@@ -35,6 +37,31 @@
 	line-height: math.div(35 , 18);
 }
 
+
+//========================================================================================================================================================
+.actions {
+	display: flex;
+			gap: rem(25);
+}
+.action {
+	img{
+				border-radius: 50%;
+				transition: all 0.1s ease 0s;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					img{
+				transform: scale(1.05);
+			}
+				}
+			}
+			&:active {
+				img{
+					transform: scale(0.95);
+					box-shadow: 0px 0px 5px 1px #512729;
+				}
+			}
+}
 //=========================================================================================
 // .title {
 // 	font-weight: 600;

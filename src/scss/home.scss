@@ -3,7 +3,6 @@
 	background: url('../img/main/main-bg.jpg') 50%/ cover no-repeat;
 	position: relative;
 	@include adaptiveValue("min-height", 750, 530);
-	@include adaptiveValue("margin-bottom", 70, 30);
 		// .main__container
 
 		&__container {
@@ -51,7 +50,6 @@
 		&__text {
 			font-size: rem(20);
 			line-height: math.div(30 , 20);
-			// color: #000000;
 			color: #fff;
 			@media (max-width: em(600)){
 					font-size: rem(18);
@@ -64,30 +62,34 @@
 		// .main__actions
 
 		&__actions {
-			display: flex;
-			gap: rem(25);
+			@media (max-width:$mobileSmall){
+				// align-items: center;
+				justify-content: center;
+			}
+			// display: flex;
+			// gap: rem(25);
 		}
 
 		// .main__action
 
 		&__action {
-			img{
-				border-radius: 50%;
-				transition: all 0.1s ease 0s;
-			}
-			@media (any-hover: hover){
-				&:hover{
-					img{
-				transform: scale(1.05);
-			}
-				}
-			}
-			&:active {
-				img{
-					transform: scale(0.95);
-					box-shadow: 0px 0px 5px 1px #512729;
-				}
-			}
+			// img{
+			// 	border-radius: 50%;
+			// 	transition: all 0.1s ease 0s;
+			// }
+			// @media (any-hover: hover){
+			// 	&:hover{
+			// 		img{
+			// 	transform: scale(1.05);
+			// }
+			// 	}
+			// }
+			// &:active {
+			// 	img{
+			// 		transform: scale(0.95);
+			// 		box-shadow: 0px 0px 5px 1px #512729;
+			// 	}
+			// }
 		}
 }
 }
@@ -95,6 +97,7 @@
 
 //========================================================================================================================================================
 .aboutme {
+	background-color: #fcf0f0;
 		@include adaptiveValue("padding-top", 90, 30);
 		@include adaptiveValue("padding-bottom", 90, 40);
 		// .aboutme__container
@@ -114,7 +117,6 @@
 			@include adaptiveValue("column-gap", 100, 10);
 			@media (max-width:$mobile){
 				flex-direction: column;
-				// @include adaptiveValue("row-gap", 100, 10);
 				row-gap: rem(30);
 			}
 		}
@@ -141,11 +143,9 @@
 			display: flex;
 			flex-direction: column;
 			padding-top: rem(30);
-			// gap: rem(50);
 			@include adaptiveValue("gap", 50, 20);
 			flex: 1 1 auto;
 			min-width: 0;
-			// border: 1px solid #512729;
 			font-weight: 700;
 			@media (max-width:$mobileSmall){
 				font-size: rem(16);
@@ -181,15 +181,15 @@
 
 		&__swiper-wrapper {
 			display: flex;
-  			align-items: stretch;
+			align-items: stretch;
 		}
 
 		// .services__swiper-slide
 
 		&__swiper-slide {
 			display: flex;
-  			flex-direction: column;
-  			flex: 1 0 auto;
+			flex-direction: column;
+			flex: 1 0 auto;
 			height: 100%;
 		}
 }
@@ -202,6 +202,7 @@
 	align-items: stretch;
 }
 .swiper-slide {
+	background-color: #fff;
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
@@ -226,7 +227,6 @@
 		// .swiper-slide__title
 
 		&__title {
-			// font-family: "Comfortaa";
 			font-size: rem(25);
 			color: $darckColor;
 			font-weight: 700;
@@ -256,11 +256,115 @@
 			}
 		}
 }
-.swiper-pagination {
+
+
+//========================================================================================================================================================
+.price {
+	
+	background-color: #fcf0f0;
+		@include adaptiveValue("padding-top", 90, 30);
+		@include adaptiveValue("padding-bottom", 90, 40);
+		// .price__container
+
+		&__container {
+		}
+
+		&__content{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			@include adaptiveValue("row-gap", 50, 40);
+		}
+		// .price__title
+
+		&__title {
+		}
+
+		// .price__table
+
+		&__table {
+			font-family: "Oswald";
+			background-color: #fff;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+			border-radius: rem(50);
+			font-size: rem(20);
+			border-collapse: separate;
+			padding: rem(50);
+			border-spacing: rem(25);
+			th{
+				font-size: rem(25);
+				padding-bottom: rem(30);
+				color: $darckColor;
+				@media (max-width:$mobileSmall){
+					font-size: rem(20);
+				}
+			}
+			th:nth-child(2){
+				text-align: left;
+			}
+			td:nth-child(1){
+				border-bottom: 1px solid rgba(81, 39, 41, 0.3);
+				
+			}
+			td:not(:last-child){
+				padding-right: rem(30);
+				span{
+					font-weight: 700;
+					color: $darckColor;
+				}
+			}
+			td:nth-child(3){
+				flex-wrap: nowrap;
+					gap: rem(5);
+					display: flex;
+					justify-content: space-between;
+				}	
+			td:nth-child(2){
+				@media (max-width:$mobile){
+					text-align: center;
+				}
+				}	
+			@media (max-width: em(882)){
+				border-spacing: rem(15);
+				font-size: rem(18);
+				img{
+					transform: scale(0.8);
+				}
+			}
+			@media (max-width:$mobile){
+				font-size: 18px;
+				padding: rem(30);
+				border-spacing: rem(15);
+				span{
+					font-size: rem(18);
+				}
+				img{
+					transform: scale(0.8);
+				}
+			}
+			@media (max-width:$mobileSmall){
+				font-size: rem(14);
+				padding: rem(20) rem(5);
+				border-spacing: rem(10);
+				border-radius: rem(20);
+				span{
+					font-size: rem(16);
+				}
+				img{
+					transform: scale(0.7);
+				}
+			}
+		}
+
+		// .price__actions
+
+		&__actions {
+		}
+
+		// .price__action
+
+		&__action {
+		}
 }
-.swiper-button-prev {
-}
-.swiper-button-next {
-}
-.swiper-scrollbar {
-}
+
