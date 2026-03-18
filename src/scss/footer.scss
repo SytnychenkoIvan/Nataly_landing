@@ -1,9 +1,8 @@
 .footer {
-	border-top: 1px solid #311a1b;
 	background-color: #F9ECE1;
-min-height: rem(200);
-@include adaptiveValue("padding-top", 50, 20);
-@include adaptiveValue("padding-bottom", 50, 20);
+	min-height: rem(200);
+	@include adaptiveValue("padding-top", 50, 20);
+	@include adaptiveValue("padding-bottom", 50, 20);
 		// .footer__container
 
 		&__container {
@@ -107,6 +106,10 @@ min-height: rem(200);
 		// .menu-footer__item
 
 		&__item {
+			img{
+				margin-right: rem(10);
+
+			}
 			&:not(:last-child){
 					margin-bottom: rem(15);
 			}

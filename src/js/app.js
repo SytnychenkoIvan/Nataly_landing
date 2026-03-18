@@ -43,7 +43,7 @@ flsFunctions.spollers();
 Документація: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сніппет (HTML): showmore
 */
-// flsFunctions.showMore();
+flsFunctions.showMore();
 
 /*
 Модуль "Ефект хвиль"
@@ -204,4 +204,4 @@ import "./files/script.js";
 Документація плагіна: https://www.lightgalleryjs.com/docs/
 Сніппет(HTML):
 */
-// import "./files/gallery.js";
+import "./files/gallery.js";

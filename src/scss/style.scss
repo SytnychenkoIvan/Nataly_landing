@@ -267,7 +267,11 @@ body {
 @import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВА>
 
+@import "libs/gallery/lightgallery-bundle.scss";
+// @import "libs/gallery/_lg-theme-default.scss";
 
+
+// @import '/libs/gallery/lightgallery.scss';
 
 //<ОСНОВНОЙ БЛОК>
 

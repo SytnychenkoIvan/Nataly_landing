@@ -301,7 +301,8 @@ new Swiper('.swiper', {
 		clickable: true,
 	},
 	autoHeight: true,
-
+	// centeredSlides: true,
+	// slidesPerView: `auto`,
 	observer: true,
 	observeParents: true,
 
@@ -325,15 +326,15 @@ new Swiper('.swiper', {
 			autoHeight: true,
 		},
 		768: {
-			// observer: true,
-			// observeParents: true,
+			observer: true,
+			observeParents: true,
 			slidesPerView: 1.5,
 			spaceBetween: 25,
 			autoHeight: true,
 		},
 		992: {
-			// observer: true,
-			// observeParents: true,
+			observer: true,
+			observeParents: true,
 			slidesPerView: 3,
 			// spaceBetween: 30,
 			autoHeight: true,

@@ -10,6 +10,8 @@
 		}
 		&__price {
 		}
+		&__works {
+		}
 }
 
 
@@ -25,7 +27,7 @@
 	@include adaptiveValue("font-size", 50, 35);
 	// font-size: rem(50);
 	font-weight: 400;
-	margin-bottom: rem(100);
+	// margin-bottom: rem(100);
 	@include adaptiveValue("margin-bottom", 100, 60);
 	text-shadow: rem(2) rem(2) rem(0) #afaeae;
 	@media (max-width:$mobile){
@@ -47,6 +49,7 @@
 	img{
 				border-radius: 50%;
 				transition: all 0.1s ease 0s;
+				box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.3);
 			}
 			@media (any-hover: hover){
 				&:hover{
