@@ -142,7 +142,7 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		row-gap: rem(15);
+		// row-gap: rem(15);
 		@include adaptiveValue("column-gap", 40, 5);
 		align-items: center;
 		justify-content: center;

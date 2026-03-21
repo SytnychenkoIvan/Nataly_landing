@@ -347,7 +347,6 @@ body._lock {
 .menu__list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 0.9375rem;
 }
 @media (min-width: 77.5em) {
   .menu__list {
@@ -1074,7 +1073,7 @@ body._lock {
   border-radius: 24px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   flex: 1 0 auto;
-  height: 100%;
+  height: auto;
 }
 
 .swiper-autoheight,
@@ -1992,7 +1991,7 @@ button.swiper-pagination-bullet {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  height: 100%;
+  height: auto;
 }
 
 .swiper-wrapper {
