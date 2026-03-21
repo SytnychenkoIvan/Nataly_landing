@@ -1,5 +1,6 @@
 .header {
 	background-color: #F9ECE1;
+	// margin-top: rem(45);
 	@include adaptiveValue("padding-top", 45, 15);
 	@include adaptiveValue("padding-bottom", 45, 15);
 	position: fixed;
@@ -69,13 +70,6 @@
 					transform: scale(0.8);
 				}
 			}
-			@media (any-hover: hover){
-				&:hover{
-					img{
-						transform: scale(1.05);
-					}
-				}
-			}
 			&:active {
 				img{
 					transform: scale(0.95);
@@ -85,6 +79,13 @@
 					}
 				}
 			}	
+			@media (any-hover: hover){
+				&:hover{
+					img{
+						transform: scale(1.05);
+					}
+				}
+			}
 		}
 	}
 }
@@ -127,6 +128,7 @@
 				&::before{
 					left: 0;
 				}
+			
 			}
 		}
 		@media (max-width:$tablet){

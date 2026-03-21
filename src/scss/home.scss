@@ -63,34 +63,13 @@
 
 		&__actions {
 			@media (max-width:$mobileSmall){
-				// align-items: center;
 				justify-content: center;
 			}
-			// display: flex;
-			// gap: rem(25);
 		}
 
 		// .main__action
 
-		&__action {
-			// img{
-			// 	border-radius: 50%;
-			// 	transition: all 0.1s ease 0s;
-			// }
-			// @media (any-hover: hover){
-			// 	&:hover{
-			// 		img{
-			// 	transform: scale(1.05);
-			// }
-			// 	}
-			// }
-			// &:active {
-			// 	img{
-			// 		transform: scale(0.95);
-			// 		box-shadow: 0px 0px 5px 1px #512729;
-			// 	}
-			// }
-		}
+		
 }
 }
 
@@ -125,7 +104,6 @@
 
 		&__image {
 			flex: 0 0 40%;
-			// max-height: 650px;
 			aspect-ratio: 4/5;
 			overflow: hidden;
 			border-radius: 30px;
@@ -162,6 +140,7 @@
 		// .services__container
 
 		&__container {
+			
 		}
 
 		// .services__title
@@ -290,11 +269,14 @@
 			border-radius: rem(50);
 			font-size: rem(20);
 			border-collapse: separate;
-			padding: rem(50);
-			border-spacing: rem(25);
+			padding-top: rem(25);
+			padding-bottom: rem(25);
+			padding-left: rem(50);
+			padding-right: rem(50);
+			border-spacing: rem(15);
 			th{
 				font-size: rem(25);
-				padding-bottom: rem(30);
+				padding-bottom: rem(15);
 				color: $darckColor;
 				@media (max-width:$mobileSmall){
 					font-size: rem(20);
@@ -436,6 +418,8 @@
 		left: 0 !important;
 	}
 }
-
+.lg-toolbar{
+	top: 20px!important;
+}
 
 

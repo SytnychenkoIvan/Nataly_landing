@@ -3,6 +3,7 @@
 		// .page__main
 
 		&__main {
+			
 		}
 		&__aboutme {
 		}
@@ -13,7 +14,49 @@
 		&__works {
 		}
 }
-
+.box{
+	opacity: 0;
+			transform: translateY(100px);
+			transition: all 0.6s ease-out 0.3s;
+			&.show {
+				opacity: 1;
+				transform: translateY(0);
+			}
+}
+.box-todown{
+	opacity: 0;
+			transform: translateY(-100px);
+			transition: all 0.6s ease-out 0.3s;
+			&.show {
+				opacity: 1;
+				transform: translateY(0);
+				.menu-open &{
+					height: 100%;
+					@media (min-width:$mobile){
+						height: auto;
+					}
+				}
+			}
+}
+.box-toright{
+	opacity: 0;
+			transform: translateX(-200px);
+			transition: all 0.6s ease-out 0.3s;
+			&.show {
+				opacity: 1;
+				transform: translateX(0);
+			}
+}
+.box-toleft{
+	opacity: 0;
+			transform: translateX(200px);
+			transition: all 0.6s ease-out 0.3s;
+			&.show {
+				opacity: 1;
+				transform: translateX(0);
+				// min-height: 500px;
+			}
+}
 
 .main-title {
 	text-shadow: 2px 2px 0px #afaeae;
@@ -23,12 +66,9 @@
 	text-underline-offset: rem(15);
 	text-decoration-thickness: rem(3);
 	font-family: "Montserrat";
-	// font-family: "Comfortaa";
 	@include adaptiveValue("font-size", 50, 35);
-	// font-size: rem(50);
 	font-weight: 400;
-	// margin-bottom: rem(100);
-	@include adaptiveValue("margin-bottom", 100, 60);
+	@include adaptiveValue("margin-bottom", 60, 40);
 	text-shadow: rem(2) rem(2) rem(0) #afaeae;
 	@media (max-width:$mobile){
 		text-shadow: rem(1.5) rem(1.5) rem(0) #afaeae;
@@ -51,17 +91,17 @@
 				transition: all 0.1s ease 0s;
 				box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.3);
 			}
-			@media (any-hover: hover){
-				&:hover{
-					img{
-				transform: scale(1.05);
-			}
-				}
-			}
 			&:active {
 				img{
 					transform: scale(0.95);
 					box-shadow: 0px 0px 5px 1px #512729;
+				}
+			}
+			@media (any-hover: hover){
+				&:hover{
+					img{
+				transform: scale(1.05);
+				}
 				}
 			}
 }
