@@ -289,6 +289,12 @@ window.addEventListener("load", function (e) {
 	//initSlidersScroll();
 });
 
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+
+
 
 new Swiper('.swiper', {
 	modules: [Navigation, Pagination],
@@ -311,24 +317,32 @@ new Swiper('.swiper', {
 	centeredSlides: true,
 	loop: true,
 	breakpoints: {
+
 		320: {
-			// observer: true,
-			// observeParents: true,
+			observer: true,
+			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 10,
 			// autoHeight: true,
 		},
-		650: {
-			// observer: true,
-			// observeParents: true,
+		480: {
+			observer: true,
+			observeParents: true,
 			slidesPerView: 1.5,
+			spaceBetween: 10,
+			// autoHeight: true,
+		},
+		650: {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 2,
 			spaceBetween: 20,
 			// autoHeight: true,
 		},
 		768: {
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1.5,
+			slidesPerView: 2,
 			spaceBetween: 25,
 			// autoHeight: true,
 		},
@@ -339,10 +353,10 @@ new Swiper('.swiper', {
 			// autoHeight: true,
 		},
 		1200: {
-			// observer: true,
-			// observeParents: true,
-			// slidesPerView: 3,
-			// spaceBetween: 30,
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 30,
 			// autoHeight: true,
 		},
 	},
@@ -361,24 +375,27 @@ new Swiper('.swiper', {
 // // Встановлюємо рамку
 // element.style.border = '2px solid green';
 
-function setEqualSlideHeights() {
-	const slides = document.querySelectorAll('.services__swiper-slide');
-	let maxHeight = 0;
+// function setEqualSlideHeights() {
+// 	const slides = document.querySelectorAll('.services__swiper-slide');
+// 	let maxHeight = 0;
 
-	// спочатку скидаємо висоту, щоб правильно визначити
-	slides.forEach(slide => slide.style.height = 'auto');
+// 	// спочатку скидаємо висоту, щоб правильно визначити
+// 	slides.forEach(slide => slide.style.height = 'auto');
 
-	// знаходимо найвищий слайд
-	slides.forEach(slide => {
-		const h = slide.offsetHeight;
-		if (h > maxHeight) maxHeight = h;
-	});
+// 	// знаходимо найвищий слайд
+// 	slides.forEach(slide => {
+// 		const h = slide.offsetHeight;
+// 		if (h > maxHeight) maxHeight = h;
+// 	});
 
-	// встановлюємо всім слайдам одну висоту
-	slides.forEach(slide => slide.style.height = maxHeight + 'px');
-}
+// 	// встановлюємо всім слайдам одну висоту
+// 	slides.forEach(slide => slide.style.height = maxHeight + 'px');
+// }
 
-// Викликаємо після завантаження сторінки
-window.addEventListener('load', setEqualSlideHeights);
-// Викликаємо після ресайзу
-window.addEventListener('resize', setEqualSlideHeights);
+// // Викликаємо після завантаження сторінки
+// window.addEventListener('load', setEqualSlideHeights);
+// // Викликаємо після ресайзу
+// window.addEventListener('resize', setEqualSlideHeights);
+
+
+

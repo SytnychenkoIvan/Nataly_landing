@@ -82,25 +82,47 @@
 
 //========================================================================================================================================================
 .actions {
+	// display: flex;
+	// 		gap: rem(25);
 	display: flex;
-			gap: rem(25);
+		gap: rem(15);
+		align-items: center;
+		margin-right: rem(10);
+		@media (max-width:$tablet){
+			gap: rem(10);
+		}
+		@media (max-width:$mobile){
+			flex-direction: row;
+			margin-right: rem(0);
+		}
+		@media (max-width:$mobileSmall){
+			gap: rem(10);
+		}
 }
 .action {
 	img{
 				border-radius: 50%;
-				transition: all 0.1s ease 0s;
+				transition: all 0.3s ease 0s;
+				// transition: transform 1.15s ease, box-shadow 1.15s ease;
 				box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.3);
+				opacity: 1;
 			}
 			&:active {
 				img{
 					transform: scale(0.95);
 					box-shadow: 0px 0px 5px 1px #512729;
+					// opacity: 1;
+					@media (max-width:$tablet){
+						transform: scale(0.95);
+					}
 				}
-			}
+			}	
 			@media (any-hover: hover){
 				&:hover{
 					img{
-				transform: scale(1.05);
+						opacity: 0.8;
+				// transform: scale(1.05);
+				
 				}
 				}
 			}

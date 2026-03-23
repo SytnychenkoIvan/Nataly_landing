@@ -37,25 +37,46 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
 // import '@scss/libs/gallery/lightgallery-bundle.scss';
 
 // Запуск
-const galleries = document.querySelectorAll('[data-gallery]');
-if (galleries.length) {
-	let galleyItems = [];
+// const galleries = document.querySelectorAll('[data-gallery]');
+// if (galleries.length) {
+// 	let galleyItems = [];
+// 	galleries.forEach(gallery => {
+// 		galleyItems.push({
+// 			gallery,
+// 			galleryClass: lightGallery(gallery, {
+// 				plugins: [lgThumbnail],
+// 				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
+// 				speed: 500,
+// 				download: false,
+// 			})
+// 		})
+// 	});
+// 	// Додаємо в об'єкт модулів
+// 	flsModules.gallery = galleyItems;
+// }
+
+window.addEventListener('load', () => {
+	const galleries = document.querySelectorAll('[data-gallery]');
 	galleries.forEach(gallery => {
-		galleyItems.push({
-			gallery,
-			galleryClass: lightGallery(gallery, {
-				plugins: [lgThumbnail],
-				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
-				speed: 500,
+		lightGallery(gallery, {
+			plugins: [lgThumbnail],
+			speed: 500,
+			download: false,
+			mobileSettings: {
+				controls: true,
+				showCloseIcon: true,
 				download: false,
-			})
-		})
+				rotate: false
+			}
+		});
 	});
-	// Додаємо в об'єкт модулів
-	flsModules.gallery = galleyItems;
-}
+});
 
-
+// document.addEventListener('lgAfterOpen', () => {
+// 	setTimeout(() => {
+// 		document.querySelector('.lg-outer')?.classList.add('lg-show-in');
+// 	}, 50);
+// });
 // galleries();
 
 
