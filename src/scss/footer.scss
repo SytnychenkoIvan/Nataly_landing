@@ -94,6 +94,8 @@
 		// .menu-footer__titel
 
 		&__titel {
+			font-family: "Oswald";
+			font-size: rem(20);
 			margin-bottom: rem(20);
 			font-weight: 700;
 		}
@@ -119,9 +121,10 @@
 		// .menu-footer__link
 
 		&__link {
+			font-family: "Oswald";
 			display: inline-block;
 			transition: all 0.1s ease 0s;
-			font-size: rem(16);
+			font-size: rem(18);
 			line-height: math.div(25 , 16);
 			background: linear-gradient(to right, currentColor 0%, currentColor 100%) no-repeat;
       	background-size: 0 2px; /* Начальная ширина подчеркивания */
@@ -149,15 +152,16 @@
 		}
 }
 .information-dev{
-	padding-top: rem(10);
-	padding-bottom: rem(10);
-			font-size: rem(14);
-			color: #8b8787;
-			text-align: center;
-			@media (max-width:$mobileSmall){
-				font-size: rem(12);
-			}
-		}
+	padding-top: rem(5);
+	padding-bottom: rem(5);
+	font-family: "Oswald";
+	font-size: rem(12);
+	color: #8b8787;
+	text-align: center;
+	@media (max-width:$mobileSmall){
+		font-size: rem(12);
+	}
+}
 .item-center{
 	text-align: center;
 }

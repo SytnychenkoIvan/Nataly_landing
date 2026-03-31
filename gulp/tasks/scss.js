@@ -1,4 +1,4 @@
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename'
 
@@ -44,7 +44,7 @@ export const scss = () => {
 				app.isBuild,
 				autoprefixer({
 					grid: true,
-					overrideBrowserlist: ["last 3 versions"],
+					overrideBrowserslist: ["last 3 versions"],
 					cascade: true
 				})
 			)
@@ -61,5 +61,9 @@ export const scss = () => {
 			extname: ".min.css"
 		}))
 		.pipe(app.gulp.dest(app.path.build.css))
-		.pipe(app.plugins.browsersync.stream());
+		// .pipe(app.plugins.browsersync.stream());
+		.on('end', () => {
+	app.plugins.browsersync.reload();
+});
+		
 }

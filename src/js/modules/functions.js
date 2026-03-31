@@ -67,6 +67,17 @@ export function menuClose() {
 	document.documentElement.classList.remove("menu-open");
 }
 
+// Функція яка при натисканні на кнопку в меню закрривае його
+function menuLinksClose() {
+	document.addEventListener("click", function (e) {
+		const link = e.target.closest('.menu__link');
+
+		if (link && document.documentElement.classList.contains("menu-open")) {
+			menuClose();
+		}
+	});
+}
+menuLinksClose();
 
 //==== Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;

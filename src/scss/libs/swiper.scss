@@ -28,7 +28,6 @@
 	list-style: none;
 	z-index: 1;
 	@include adaptiveValue("padding-bottom",80 , 50);
-	// padding-bottom: 50px;
 	padding-left: 15px;
 	padding-right: 15px;
 }

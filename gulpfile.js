@@ -31,7 +31,8 @@ import { ftp } from "./gulp/tasks/ftp.js";
 function watcher() {
 	gulp.watch(path.watch.files, gulp.series(copy, ftp));
 	gulp.watch(path.watch.html, gulp.series(html, ftp));
-	gulp.watch(path.watch.scss, gulp.series(scss, ftp));
+	// gulp.watch(path.watch.scss, gulp.series(scss, ftp));
+	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.js, gulp.series(js, ftp));
 	gulp.watch(path.watch.images, gulp.series(images, ftp));
 }

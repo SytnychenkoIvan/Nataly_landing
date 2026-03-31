@@ -10,7 +10,8 @@ export const plugins = {
 	replace: replace,
 	plumber: plumber,
 	notify: notify,
-	browsersync: browsersync,
+	browsersync: browsersync.create(),
+	// browsersync: browsersync,
 	newer: newer,
 	if: ifPlugin
 }

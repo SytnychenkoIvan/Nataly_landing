@@ -39,7 +39,7 @@
 		"gulp-webp-html-nosvg": "^1.1.1",
 		"gulp-webpcss": "^1.1.1",
 		"gulp-zip": "^5.1.0",
-		"sass": "^1.59.3",
+		"sass": "^1.69.5",
 		"swiper": "^8.4.7",
 		"vinyl-ftp": "^0.6.1",
 		"webp-converter": "2.2.3",
