@@ -108,6 +108,9 @@
 		// .menu-footer__item
 
 		&__item {
+			display: flex;
+			align-items: center;
+			// gap: rem(5);
 			img{
 				margin-right: rem(10);
 

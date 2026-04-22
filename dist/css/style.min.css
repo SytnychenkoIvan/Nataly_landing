@@ -164,12 +164,13 @@ body._lock {
 
 .header {
   background-color: #F9ECE1;
+  transition: all 0.3s ease 0s;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
-  transition: all 0.3s ease 0s;
+  height: 6.25rem;
 }
 @media (min-width: 77.5em) {
   .header {
@@ -215,32 +216,31 @@ body._lock {
     padding-bottom: 0.625rem;
   }
 }
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 .header._header-scroll {
+  background: none;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  height: 4.375rem;
 }
-@media (max-width: 61.99875em) {
-  .header._header-scroll {
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-  }
-}
-@media (max-width: 47.99875em) {
-  .header._header-scroll {
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-  }
+.header._header-scroll::before {
+  opacity: 1;
 }
 .header__container {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-@media (max-width: 47.99875em) {
-  .header__container {
-    min-height: 60px;
-  }
 }
 .header__logo {
   position: relative;
@@ -270,7 +270,9 @@ body._lock {
     left: -100%;
     transition: all 0.3s ease 0s;
     overflow: auto;
-    background-color: #FFEFD7;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     gap: 2.1875rem;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -575,6 +577,10 @@ body._lock {
   margin-bottom: 1.25rem;
   font-weight: 700;
 }
+.menu-footer__item {
+  display: flex;
+  align-items: center;
+}
 .menu-footer__item img {
   margin-right: 0.625rem;
 }
@@ -792,6 +798,131 @@ body._lock {
 @media (any-hover: hover) {
   .action:hover img {
     opacity: 0.8;
+  }
+}
+
+.action-button {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.875rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.action-button:hover::after {
+  opacity: 0;
+  animation: none;
+}
+.action-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(25px);
+  z-index: 2;
+}
+.action-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 60%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.05) 70%, transparent 100%);
+  transform: skewX(-20deg);
+  animation: metalShine 5s ease-in-out infinite;
+  animation-delay: 2s;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+@keyframes metalShine {
+  0% {
+    left: -150%;
+  }
+  60% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+.action-button__text {
+  padding: 1.25rem 1.875rem;
+  font-family: "Comfortaa";
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+.action-button__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 0 50%;
+}
+.action-button__color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-90deg, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.ring {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  bottom: 2.5rem;
+  right: -200px;
+  z-index: 5;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(145deg, #c0c0c0, #e8e8e8, #a9a9a9);
+  transition: all 0.5s ease 0s;
+}
+@media (max-width: 47.99875em) {
+  .ring {
+    width: 100px;
+    height: 100px;
+    bottom: 1.25rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .ring {
+    width: 70px;
+    height: 70px;
+    bottom: 1.25rem;
+  }
+}
+.ring__text {
+  color: #512729;
+  line-height: 130%;
+  text-align: center;
+}
+@media (max-width: 47.99875em) {
+  .ring__text {
+    font-size: 0.625rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .ring__text {
+    font-size: 0.5rem;
+    line-height: 150%;
+  }
+}
+
+.ring.show {
+  right: 50px;
+}
+@media (max-width: 47.99875em) {
+  .ring.show {
+    right: 20px;
   }
 }
 
@@ -1766,18 +1897,18 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 77.5em) {
   .main__content {
-    padding-top: 16.875rem;
+    padding-top: 13.125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 77.5em) {
-  @supports (padding-top: clamp( 8.125rem , 5.0815217391rem  +  15.2173913043vw , 16.875rem )) {
+  @supports (padding-top: clamp( 8.125rem , 6.3858695652rem  +  8.6956521739vw , 13.125rem )) {
     .main__content {
-      padding-top: clamp( 8.125rem , 5.0815217391rem  +  15.2173913043vw , 16.875rem );
+      padding-top: clamp( 8.125rem , 6.3858695652rem  +  8.6956521739vw , 13.125rem );
     }
   }
-  @supports not (padding-top: clamp( 8.125rem , 5.0815217391rem  +  15.2173913043vw , 16.875rem )) {
+  @supports not (padding-top: clamp( 8.125rem , 6.3858695652rem  +  8.6956521739vw , 13.125rem )) {
     .main__content {
-      padding-top: calc(8.125rem + 8.75 * (100vw - 20rem) / 57.5);
+      padding-top: calc(8.125rem + 5 * (100vw - 20rem) / 57.5);
     }
   }
 }
@@ -1836,7 +1967,7 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width: 29.99875em) {
-  .main .main__actions {
+  .main__actions {
     justify-content: center;
   }
 }
@@ -1924,6 +2055,7 @@ button.swiper-pagination-bullet {
   aspect-ratio: 4/5;
   overflow: hidden;
   border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .aboutme__image img {
   width: 100%;
@@ -2281,6 +2413,7 @@ button.swiper-pagination-bullet {
 .gallery {
   border-radius: 10px;
   display: grid;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   justify-content: center;
 }
@@ -2293,11 +2426,11 @@ button.swiper-pagination-bullet {
   aspect-ratio: 1/1;
   height: 100%;
   width: 100%;
-  border: 15px solid #1b1b1b;
+  border: 15px solid #fcf0f0;
 }
 @media (max-width: 47.99875em) {
   .gallery__image {
-    border: 10px solid #1b1b1b;
+    border: 10px solid #fcf0f0;
   }
 }
 .gallery__image a {
